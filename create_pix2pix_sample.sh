@@ -32,7 +32,7 @@ for filename in $input_datapath/*;do
     damaged_filename=$damaged_dir/$(basename $filename)_damaged.png
     output_filename=$(basename $filename)
     
-    ./damage_image.py $filename $damaged_filename 1
+    ./damage_image.py $filename $damaged_filename 5
 
     #Convert to concatenated Image
     convert +append $damaged_filename $filename $train_output_dir/$output_filename
